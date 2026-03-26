@@ -43,7 +43,7 @@ export default function Home() {
         {/* Welcome Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h1 className="text-4xl font-headline font-bold text-primary">Papan Informasi Komunitas</h1>
+            <h1 className="text-4xl font-headline font-bold text-primary">Kabar Berita Wirahadidjaja</h1>
             <p className="text-muted-foreground mt-1">Berita terbaru dan pembaruan penting keluarga besar Wirahadidjaja.</p>
           </div>
           <Link href="/navigator">
