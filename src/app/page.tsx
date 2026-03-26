@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { Megaphone, Newspaper, Heart, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 const newsItems = [
   {
@@ -36,18 +37,21 @@ const newsItems = [
 ]
 
 export default function Home() {
+  const bandungHero = PlaceHolderImages.find(img => img.id === 'bandung-landmark');
+
   return (
     <PageWrapper>
       <div className="space-y-10 animate-in fade-in duration-500">
         
-        {/* Main Hero Banner - Simplified without news/text content */}
+        {/* Main Hero Banner - Gedung Sate Bandung */}
         <div className="relative w-full h-[350px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
           <Image 
-            src="/banner_wirahadidjaja.jpg" 
-            alt="Wirahadidjaja Hero Banner" 
+            src={bandungHero?.imageUrl || "https://picsum.photos/seed/bandung/1200/800"} 
+            alt="Gedung Sate Jawa Barat" 
             fill 
             className="object-cover"
             priority
+            data-ai-hint={bandungHero?.imageHint || "bandung city"}
           />
         </div>
 
@@ -66,11 +70,11 @@ export default function Home() {
             <Card className="lg:col-span-2 overflow-hidden border-none shadow-lg group bg-white">
               <div className="relative h-64 md:h-80">
                 <Image 
-                  src="https://picsum.photos/seed/bandung/1200/800" 
-                  alt="Bandung Landmark" 
+                  src="https://picsum.photos/seed/reuni/1200/800" 
+                  alt="Pertemuan Keluarga" 
                   fill 
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  data-ai-hint="bandung city"
+                  data-ai-hint="family gathering"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 p-6 md:p-8 space-y-2">
