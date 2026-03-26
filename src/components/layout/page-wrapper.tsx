@@ -4,7 +4,6 @@ import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/s
 import { AppSidebar } from "./app-sidebar"
 import { Bell, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 
 export function PageWrapper({ children }: { children: React.ReactNode }) {
   return (
@@ -24,28 +23,13 @@ export function PageWrapper({ children }: { children: React.ReactNode }) {
             </div>
           </div>
           
-          <div className="flex items-center gap-6 shrink-0">
-            {/* Sponsor Logo on the right */}
-            <div className="hidden lg:flex items-center gap-3 pr-4 border-r mr-2">
-              <span className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold">Supported by</span>
-              <div className="relative h-10 w-24">
-                <Image 
-                  src="/telkom.jpeg" 
-                  alt="Telkom Logo" 
-                  fill 
-                  className="object-contain opacity-80" 
-                />
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <Button variant="ghost" size="icon" className="relative hidden sm:flex">
-                <Bell className="h-5 w-5" />
-                <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-accent border-2 border-background"></span>
-              </Button>
-              <div className="h-8 w-8 rounded-full bg-primary/10 border flex items-center justify-center cursor-pointer hover:bg-primary/20 transition-colors">
-                <User className="h-4 w-4 text-primary" />
-              </div>
+          <div className="flex items-center gap-3 shrink-0">
+            <Button variant="ghost" size="icon" className="relative hidden sm:flex">
+              <Bell className="h-5 w-5" />
+              <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-accent border-2 border-background"></span>
+            </Button>
+            <div className="h-8 w-8 rounded-full bg-primary/10 border flex items-center justify-center cursor-pointer hover:bg-primary/20 transition-colors">
+              <User className="h-4 w-4 text-primary" />
             </div>
           </div>
         </header>
