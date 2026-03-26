@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/sidebar"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 
 const navItems = [
   {
@@ -94,7 +95,21 @@ export function AppSidebar() {
           ))}
         </SidebarMenu>
       </SidebarContent>
-      <SidebarFooter className="border-t p-4">
+      <SidebarFooter className="border-t p-4 space-y-4">
+        <div className="flex flex-col items-center gap-2 overflow-hidden">
+          {state !== "collapsed" && (
+            <span className="text-[10px] text-muted-foreground uppercase tracking-widest font-semibold">Supported by</span>
+          )}
+          <div className="relative flex justify-center w-full">
+            <Image 
+              src="/telkom.jpeg" 
+              alt="Telkom Logo" 
+              width={state === "collapsed" ? 24 : 80} 
+              height={32} 
+              className="object-contain opacity-80 hover:opacity-100 transition-opacity"
+            />
+          </div>
+        </div>
         {state !== "collapsed" && (
           <div className="text-[10px] text-center text-muted-foreground">
             © 2024 Keluarga Besar Wirahadidjaja
