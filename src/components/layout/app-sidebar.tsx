@@ -5,13 +5,9 @@ import {
   BookOpen,
   Calendar,
   History,
-  Info,
   LayoutDashboard,
   Search,
-  Sparkles,
-  Users,
-  Menu,
-  ChevronLeft
+  Users
 } from "lucide-react"
 
 import {
@@ -22,7 +18,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarTrigger,
   useSidebar
 } from "@/components/ui/sidebar"
 import Link from "next/link"
@@ -58,11 +53,6 @@ const navItems = [
     title: "Layanan Khusus",
     url: "/services",
     icon: BookOpen,
-  },
-  {
-    title: "Navigator AI",
-    url: "/navigator",
-    icon: Sparkles,
   },
 ]
 

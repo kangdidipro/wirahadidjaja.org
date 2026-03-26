@@ -1,7 +1,7 @@
 import { PageWrapper } from "@/components/layout/page-wrapper"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Megaphone, Newspaper, Heart, AlertCircle, ArrowRight, Sparkles } from "lucide-react"
+import { Megaphone, Newspaper, Heart, AlertCircle, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
@@ -49,12 +49,6 @@ export default function Home() {
             <h1 className="text-4xl font-headline font-bold text-primary">Kabar Berita Wirahadidjaja</h1>
             <p className="text-muted-foreground mt-1">Berita terbaru dan pembaruan penting keluarga besar Wirahadidjaja.</p>
           </div>
-          <Link href="/navigator">
-            <Button className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold gap-2">
-              <Sparkles className="h-4 w-4" />
-              Tanya Navigator AI
-            </Button>
-          </Link>
         </div>
 
         {/* Hero Section */}
