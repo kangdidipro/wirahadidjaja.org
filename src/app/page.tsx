@@ -41,12 +41,12 @@ export default function Home() {
       <div className="space-y-10 animate-in fade-in duration-500">
         
         {/* Main Hero Banner - Simplified without news/text content */}
-        <div className="relative w-full h-[350px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl group border-4 border-white">
+        <div className="relative w-full h-[350px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white">
           <Image 
             src="/banner_wirahadidjaja.jpg" 
             alt="Wirahadidjaja Hero Banner" 
             fill 
-            className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+            className="object-cover"
             priority
           />
         </div>
