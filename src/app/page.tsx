@@ -51,87 +51,89 @@ export default function Home() {
         </div>
 
         {/* Hero Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Main News */}
-          <Card className="lg:col-span-2 overflow-hidden border-none shadow-lg group">
-            <div className="relative h-64 md:h-96">
-              <Image 
-                src={bandungHero} 
-                alt="Bandung Landmark" 
-                fill 
-                className="object-cover group-hover:scale-105 transition-transform duration-700"
-                data-ai-hint="bandung city"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-6 md:p-8 space-y-3">
-                <Badge className="bg-accent text-accent-foreground font-bold">HOT NEWS</Badge>
-                <h2 className="text-2xl md:text-3xl font-headline font-bold text-white leading-tight">
-                  Musyawarah Besar Tahunan Keluarga Wirahadidjaja 2026: Membangun Sinergi Antar Generasi
-                </h2>
-                <p className="text-white/80 line-clamp-2 max-w-2xl">
-                  Musyawarah ini bertujuan untuk mempererat silaturahmi sekaligus merancang program pemberdayaan ekonomi bagi anggota keluarga muda yang baru lulus kuliah.
-                </p>
-                <Button variant="link" className="text-white p-0 h-auto font-semibold gap-1">
-                  Baca Selengkapnya <ArrowRight className="h-4 w-4" />
-                </Button>
+        <div className="space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {/* Main News */}
+            <Card className="lg:col-span-2 overflow-hidden border-none shadow-lg group">
+              <div className="relative h-64 md:h-96">
+                <Image 
+                  src={bandungHero} 
+                  alt="Bandung Landmark" 
+                  fill 
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  data-ai-hint="bandung city"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 p-6 md:p-8 space-y-3">
+                  <Badge className="bg-accent text-accent-foreground font-bold">HOT NEWS</Badge>
+                  <h2 className="text-2xl md:text-3xl font-headline font-bold text-white leading-tight">
+                    Musyawarah Besar Tahunan Keluarga Wirahadidjaja 2026: Membangun Sinergi Antar Generasi
+                  </h2>
+                  <p className="text-white/80 line-clamp-2 max-w-2xl">
+                    Musyawarah ini bertujuan untuk mempererat silaturahmi sekaligus merancang program pemberdayaan ekonomi bagi anggota keluarga muda yang baru lulus kuliah.
+                  </p>
+                  <Button variant="link" className="text-white p-0 h-auto font-semibold gap-1">
+                    Baca Selengkapnya <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+            </Card>
+
+            {/* Side Panels */}
+            <div className="space-y-6">
+              <Card className="border-l-4 border-l-destructive shadow-sm">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-2 text-destructive">
+                    <Heart className="h-5 w-5" />
+                    <CardTitle className="text-lg font-headline">Berita Kedukaan</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="space-y-1">
+                    <p className="font-semibold text-sm">Alm. Bpk. H. Ahmad Wirahadidjaja</p>
+                    <p className="text-xs text-muted-foreground">Wafat: 10 Oktober 2026 • Kediaman: Bandung</p>
+                  </div>
+                  <Button variant="outline" size="sm" className="w-full text-xs">Ucapkan Belasungkawa</Button>
+                </CardContent>
+              </Card>
+
+              <Card className="border-l-4 border-l-accent shadow-sm">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center gap-2 text-accent">
+                    <Megaphone className="h-5 w-5" />
+                    <CardTitle className="text-lg font-headline">Pengumuman Penting</CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <ul className="space-y-3 text-sm">
+                    <li className="flex gap-2">
+                      <span className="text-accent font-bold">•</span>
+                      <span>Pendaftaran Beasiswa Pendidikan Tahap 2 dibuka.</span>
+                    </li>
+                    <li className="flex gap-2">
+                      <span className="text-accent font-bold">•</span>
+                      <span>Update data Kartu Wirahadidjaja sebelum 31 Okt.</span>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Sponsor Banner - Stretching Left to Right */}
+          <Card className="overflow-hidden bg-white shadow-sm border-none p-4 flex items-center justify-center">
+            <div className="flex items-center gap-6">
+              <span className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold shrink-0">Supported by</span>
+              <div className="relative h-10 w-32">
+                <Image 
+                  src="/telkom.jpeg" 
+                  alt="Telkom Logo" 
+                  fill
+                  className="object-contain opacity-80"
+                />
               </div>
             </div>
           </Card>
-
-          {/* Side Panels */}
-          <div className="space-y-6">
-            <Card className="border-l-4 border-l-destructive shadow-sm">
-              <CardHeader className="pb-3">
-                <div className="flex items-center gap-2 text-destructive">
-                  <Heart className="h-5 w-5" />
-                  <CardTitle className="text-lg font-headline">Berita Kedukaan</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="space-y-1">
-                  <p className="font-semibold text-sm">Alm. Bpk. H. Ahmad Wirahadidjaja</p>
-                  <p className="text-xs text-muted-foreground">Wafat: 10 Oktober 2026 • Kediaman: Bandung</p>
-                </div>
-                <Button variant="outline" size="sm" className="w-full text-xs">Ucapkan Belasungkawa</Button>
-              </CardContent>
-            </Card>
-
-            <Card className="border-l-4 border-l-accent shadow-sm">
-              <CardHeader className="pb-3">
-                <div className="flex items-center gap-2 text-accent">
-                  <Megaphone className="h-5 w-5" />
-                  <CardTitle className="text-lg font-headline">Pengumuman Penting</CardTitle>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-3 text-sm">
-                  <li className="flex gap-2">
-                    <span className="text-accent font-bold">•</span>
-                    <span>Pendaftaran Beasiswa Pendidikan Tahap 2 dibuka.</span>
-                  </li>
-                  <li className="flex gap-2">
-                    <span className="text-accent font-bold">•</span>
-                    <span>Update data Kartu Wirahadidjaja sebelum 31 Okt.</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Sponsor Section */}
-            <Card className="overflow-hidden bg-white shadow-sm flex items-center justify-center p-6 border-none">
-              <div className="flex flex-col items-center gap-3">
-                <span className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold">Supported by</span>
-                <div className="relative h-12 w-32 flex items-center justify-center">
-                  <Image 
-                    src="/telkom.jpeg" 
-                    alt="Telkom Logo" 
-                    fill
-                    className="object-contain opacity-90"
-                  />
-                </div>
-              </div>
-            </Card>
-          </div>
         </div>
 
         {/* News Feed Grid */}
