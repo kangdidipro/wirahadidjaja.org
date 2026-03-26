@@ -40,8 +40,8 @@ export default function Home() {
     <PageWrapper>
       <div className="space-y-10 animate-in fade-in duration-500">
         
-        {/* Main Hero Banner - Banner Wirahadidjaja */}
-        <div className="relative w-full h-[350px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white bg-muted">
+        {/* Hero Banner Section - Gambar Statis tanpa Teks/Efek */}
+        <section className="relative w-full h-[400px] md:h-[550px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white bg-muted">
           <Image 
             src="/banner_wirahadidjaja.jpg" 
             alt="Banner Keluarga Besar Wirahadidjaja" 
@@ -49,7 +49,7 @@ export default function Home() {
             className="object-cover"
             priority
           />
-        </div>
+        </section>
 
         {/* Section Title */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
