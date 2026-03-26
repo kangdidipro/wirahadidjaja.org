@@ -16,7 +16,7 @@ export function PageWrapper({ children }: { children: React.ReactNode }) {
             <SidebarTrigger className="-ml-1" />
             <div className="flex flex-col">
               <span className="font-headline font-bold text-primary tracking-tight leading-none">Wirahadidjaja</span>
-              <span className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-medium hidden sm:block">Komunitas Keluarga</span>
+              <span className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-medium hidden sm:block">KOMUNITAS KELUARGA BESAR WIRAHADIDJAJA</span>
             </div>
           </div>
           
