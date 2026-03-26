@@ -119,21 +119,6 @@ export default function Home() {
               </Card>
             </div>
           </div>
-
-          {/* Sponsor Banner - Stretching Left to Right (Height doubled) */}
-          <Card className="overflow-hidden bg-white shadow-sm border-none p-8 flex items-center justify-center">
-            <div className="flex items-center gap-12">
-              <span className="text-xs text-muted-foreground uppercase tracking-widest font-bold shrink-0">Supported by</span>
-              <div className="relative h-20 w-64">
-                <Image 
-                  src="/telkom.jpeg" 
-                  alt="Telkom Logo" 
-                  fill
-                  className="object-contain opacity-80"
-                />
-              </div>
-            </div>
-          </Card>
         </div>
 
         {/* News Feed Grid */}
