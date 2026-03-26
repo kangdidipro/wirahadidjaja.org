@@ -2,6 +2,7 @@ import { PageWrapper } from "@/components/layout/page-wrapper"
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Scale, HeartPulse, GraduationCap, TrendingUp, Handshake, Globe, CreditCard, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 
 const services = [
