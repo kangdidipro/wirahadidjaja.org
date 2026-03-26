@@ -4,6 +4,7 @@ import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/s
 import { AppSidebar } from "./app-sidebar"
 import { Bell, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 export function PageWrapper({ children }: { children: React.ReactNode }) {
   return (
@@ -13,9 +14,14 @@ export function PageWrapper({ children }: { children: React.ReactNode }) {
         <header className="flex h-20 shrink-0 items-center justify-between gap-2 border-b px-6 sticky top-0 bg-background/80 backdrop-blur-md z-30">
           <div className="flex items-center gap-4">
             <SidebarTrigger className="-ml-1" />
-            <div className="flex flex-col">
-              <span className="font-headline font-bold text-primary tracking-tight leading-none text-2xl uppercase">Wirahadidjaja.org</span>
-              <span className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-medium hidden sm:block">KOMUNITAS KELUARGA BESAR WIRAHADIDJAJA</span>
+            <div className="relative h-14 w-64 md:w-80">
+              <Image 
+                src="/banner_wirahadidjaja.jpg" 
+                alt="Banner Wirahadidjaja" 
+                fill 
+                className="object-contain object-left"
+                priority
+              />
             </div>
           </div>
           
