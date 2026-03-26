@@ -14,14 +14,13 @@ export function PageWrapper({ children }: { children: React.ReactNode }) {
         <header className="flex h-20 shrink-0 items-center justify-between gap-4 border-b px-6 sticky top-0 bg-background/80 backdrop-blur-md z-30">
           <div className="flex items-center gap-4 flex-1 overflow-hidden">
             <SidebarTrigger className="-ml-1" />
-            <div className="relative h-14 w-full max-w-[600px]">
-              <Image 
-                src="/banner_wirahadidjaja.jpg" 
-                alt="Banner Wirahadidjaja" 
-                fill 
-                className="object-contain object-left"
-                priority
-              />
+            <div className="flex flex-col">
+              <span className="text-2xl md:text-3xl font-headline font-bold text-primary tracking-tight leading-none">
+                WIRAHADIDJAJA.ORG
+              </span>
+              <span className="text-[10px] text-muted-foreground uppercase tracking-[0.15em] font-bold mt-1 hidden sm:block">
+                KOMUNITAS KELUARGA BESAR WIRAHADIDJAJA
+              </span>
             </div>
           </div>
           
