@@ -1,10 +1,9 @@
 import { PageWrapper } from "@/components/layout/page-wrapper"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Megaphone, Newspaper, Heart, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 const newsItems = [
   {
@@ -37,43 +36,61 @@ const newsItems = [
 ]
 
 export default function Home() {
-  const bandungHero = PlaceHolderImages.find(img => img.id === "bandung-landmark")?.imageUrl || "https://picsum.photos/seed/bandung/1200/800";
-
   return (
     <PageWrapper>
-      <div className="space-y-8 animate-in fade-in duration-500">
-        {/* Welcome Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-          <div>
-            <h1 className="text-4xl font-headline font-bold text-primary">Kabar Berita Wirahadidjaja</h1>
-            <p className="text-muted-foreground mt-1">Berita terbaru dan pembaruan penting keluarga besar Wirahadidjaja.</p>
+      <div className="space-y-10 animate-in fade-in duration-500">
+        
+        {/* Main Hero Banner */}
+        <div className="relative w-full h-[350px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl group border-4 border-white">
+          <Image 
+            src="/banner_wirahadidjaja.jpg" 
+            alt="Wirahadidjaja Hero Banner" 
+            fill 
+            className="object-cover group-hover:scale-105 transition-transform duration-1000"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 md:p-12">
+            <div className="max-w-4xl space-y-4">
+              <Badge className="bg-accent text-accent-foreground font-bold px-4 py-1 text-sm">PORTAL RESMI</Badge>
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-headline font-bold text-white leading-[1.1] tracking-tight">
+                Guyub Rukun Saklawase: Keluarga Besar Wirahadidjaja
+              </h1>
+              <p className="text-white/90 text-lg md:text-2xl hidden md:block font-medium max-w-3xl">
+                Menjalin silaturahmi antar generasi dan menjaga warisan luhur Aki Wirahadidjaja demi masa depan yang lebih gemilang.
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Hero Section */}
-        <div className="space-y-6">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Main News */}
-            <Card className="lg:col-span-2 overflow-hidden border-none shadow-lg group">
-              <div className="relative h-64 md:h-96">
+        {/* Section Title */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+          <div>
+            <h2 className="text-3xl font-headline font-bold text-primary">Kabar Berita & Update</h2>
+            <p className="text-muted-foreground mt-1">Pusat informasi dan berita terbaru keluarga besar Wirahadidjaja.</p>
+          </div>
+        </div>
+
+        {/* Content Grid */}
+        <div className="space-y-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Featured Highlight News */}
+            <Card className="lg:col-span-2 overflow-hidden border-none shadow-lg group bg-white">
+              <div className="relative h-64 md:h-80">
                 <Image 
-                  src={bandungHero} 
+                  src="https://picsum.photos/seed/bandung/1200/800" 
                   alt="Bandung Landmark" 
                   fill 
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                   data-ai-hint="bandung city"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 p-6 md:p-8 space-y-3">
-                  <Badge className="bg-accent text-accent-foreground font-bold">HOT NEWS</Badge>
-                  <h2 className="text-2xl md:text-3xl font-headline font-bold text-white leading-tight">
-                    Musyawarah Besar Tahunan Keluarga Wirahadidjaja 2026: Membangun Sinergi Antar Generasi
-                  </h2>
-                  <p className="text-white/80 line-clamp-2 max-w-2xl">
-                    Musyawarah ini bertujuan untuk mempererat silaturahmi sekaligus merancang program pemberdayaan ekonomi bagi anggota keluarga muda yang baru lulus kuliah.
-                  </p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 p-6 md:p-8 space-y-2">
+                  <Badge className="bg-accent text-accent-foreground font-bold">UTAMA</Badge>
+                  <h3 className="text-2xl font-headline font-bold text-white">
+                    Persiapan Mubes Tahunan 2026: Membangun Sinergi Antar Generasi
+                  </h3>
                   <Button variant="link" className="text-white p-0 h-auto font-semibold gap-1">
-                    Baca Selengkapnya <ArrowRight className="h-4 w-4" />
+                    Selengkapnya <ArrowRight className="h-4 w-4" />
                   </Button>
                 </div>
               </div>
@@ -82,37 +99,37 @@ export default function Home() {
             {/* Side Panels */}
             <div className="space-y-6">
               <Card className="border-l-4 border-l-destructive shadow-sm">
-                <CardHeader className="pb-3">
+                <CardHeader className="pb-3 p-5">
                   <div className="flex items-center gap-2 text-destructive">
                     <Heart className="h-5 w-5" />
                     <CardTitle className="text-lg font-headline">Berita Kedukaan</CardTitle>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="px-5 pb-5 space-y-4">
                   <div className="space-y-1">
                     <p className="font-semibold text-sm">Alm. Bpk. H. Ahmad Wirahadidjaja</p>
                     <p className="text-xs text-muted-foreground">Wafat: 10 Oktober 2026 • Kediaman: Bandung</p>
                   </div>
-                  <Button variant="outline" size="sm" className="w-full text-xs">Ucapkan Belasungkawa</Button>
+                  <Button variant="outline" size="sm" className="w-full text-xs font-bold">Ucapkan Belasungkawa</Button>
                 </CardContent>
               </Card>
 
               <Card className="border-l-4 border-l-accent shadow-sm">
-                <CardHeader className="pb-3">
+                <CardHeader className="pb-3 p-5">
                   <div className="flex items-center gap-2 text-accent">
                     <Megaphone className="h-5 w-5" />
-                    <CardTitle className="text-lg font-headline">Pengumuman Penting</CardTitle>
+                    <CardTitle className="text-lg font-headline">Pengumuman</CardTitle>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="px-5 pb-5 space-y-4">
                   <ul className="space-y-3 text-sm">
                     <li className="flex gap-2">
                       <span className="text-accent font-bold">•</span>
-                      <span>Pendaftaran Beasiswa Pendidikan Tahap 2 dibuka.</span>
+                      <span>Beasiswa Pendidikan Tahap 2 dibuka.</span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-accent font-bold">•</span>
-                      <span>Update data Kartu Wirahadidjaja sebelum 31 Okt.</span>
+                      <span>Verifikasi data Kartu Wirahadidjaja.</span>
                     </li>
                   </ul>
                 </CardContent>
@@ -126,14 +143,14 @@ export default function Home() {
           <div className="flex items-center justify-between">
             <h3 className="text-2xl font-headline font-bold flex items-center gap-2">
               <Newspaper className="h-6 w-6 text-primary" />
-              Berita & Pembaruan
+              Feed Berita Keluarga
             </h3>
-            <Button variant="ghost" className="text-primary hover:text-primary/80">Lihat Semua</Button>
+            <Button variant="ghost" className="text-primary hover:text-primary/80 font-bold">Lihat Semua</Button>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {newsItems.map((item) => (
-              <Card key={item.id} className="overflow-hidden hover:shadow-md transition-shadow">
+              <Card key={item.id} className="overflow-hidden hover:shadow-xl transition-all border-none shadow-sm">
                 <div className="relative h-48">
                   <Image src={item.image} alt={item.title} fill className="object-cover" />
                   <div className="absolute top-3 left-3">
@@ -142,13 +159,13 @@ export default function Home() {
                     </Badge>
                   </div>
                 </div>
-                <CardHeader>
-                  <div className="text-xs text-muted-foreground mb-2">{item.date}</div>
-                  <CardTitle className="text-lg font-headline leading-snug line-clamp-2 hover:text-primary transition-colors cursor-pointer">
+                <CardHeader className="p-5">
+                  <div className="text-xs text-muted-foreground mb-1">{item.date}</div>
+                  <CardTitle className="text-lg font-headline font-bold leading-snug line-clamp-2 hover:text-primary transition-colors cursor-pointer">
                     {item.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="px-5 pb-6">
                   <p className="text-sm text-muted-foreground line-clamp-3">
                     {item.excerpt}
                   </p>
