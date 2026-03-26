@@ -4,7 +4,6 @@ import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/s
 import { AppSidebar } from "./app-sidebar"
 import { Bell, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 
 export function PageWrapper({ children }: { children: React.ReactNode }) {
   return (
@@ -20,28 +19,13 @@ export function PageWrapper({ children }: { children: React.ReactNode }) {
             </div>
           </div>
           
-          <div className="flex items-center gap-6">
-            {/* Sponsor Banner Logo */}
-            <div className="flex items-center gap-3 border-r pr-6 border-muted-foreground/20">
-              <span className="text-[9px] text-muted-foreground uppercase tracking-widest font-bold whitespace-nowrap hidden md:block">Supported by</span>
-              <div className="relative h-8 w-20 flex items-center">
-                <Image 
-                  src="/telkom.jpeg" 
-                  alt="Telkom Logo" 
-                  fill
-                  className="object-contain opacity-90"
-                />
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <Button variant="ghost" size="icon" className="relative hidden sm:flex">
-                <Bell className="h-5 w-5" />
-                <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-accent border-2 border-background"></span>
-              </Button>
-              <div className="h-8 w-8 rounded-full bg-primary/10 border flex items-center justify-center cursor-pointer hover:bg-primary/20 transition-colors">
-                <User className="h-4 w-4 text-primary" />
-              </div>
+          <div className="flex items-center gap-3">
+            <Button variant="ghost" size="icon" className="relative hidden sm:flex">
+              <Bell className="h-5 w-5" />
+              <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-accent border-2 border-background"></span>
+            </Button>
+            <div className="h-8 w-8 rounded-full bg-primary/10 border flex items-center justify-center cursor-pointer hover:bg-primary/20 transition-colors">
+              <User className="h-4 w-4 text-primary" />
             </div>
           </div>
         </header>

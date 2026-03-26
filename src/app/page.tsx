@@ -1,9 +1,8 @@
 import { PageWrapper } from "@/components/layout/page-wrapper"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Megaphone, Newspaper, Heart, AlertCircle, ArrowRight } from "lucide-react"
+import { Megaphone, Newspaper, Heart, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
 import Image from "next/image"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 
@@ -116,6 +115,21 @@ export default function Home() {
                   </li>
                 </ul>
               </CardContent>
+            </Card>
+
+            {/* Sponsor Section */}
+            <Card className="overflow-hidden bg-white shadow-sm flex items-center justify-center p-6 border-none">
+              <div className="flex flex-col items-center gap-3">
+                <span className="text-[10px] text-muted-foreground uppercase tracking-widest font-bold">Supported by</span>
+                <div className="relative h-12 w-32 flex items-center justify-center">
+                  <Image 
+                    src="/telkom.jpeg" 
+                    alt="Telkom Logo" 
+                    fill
+                    className="object-contain opacity-90"
+                  />
+                </div>
+              </div>
             </Card>
           </div>
         </div>
