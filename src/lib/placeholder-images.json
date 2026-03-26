@@ -29,6 +29,12 @@
       "description": "Family event 1",
       "imageUrl": "https://picsum.photos/seed/wirahadidjaja5/600/400",
       "imageHint": "community event"
+    },
+    {
+      "id": "bandung-landmark",
+      "description": "Bandung city landmark Gedung Sate",
+      "imageUrl": "https://picsum.photos/seed/bandung/1200/800",
+      "imageHint": "bandung city"
     }
   ]
 }

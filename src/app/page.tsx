@@ -5,6 +5,7 @@ import { Megaphone, Newspaper, Heart, AlertCircle, ArrowRight, Sparkles } from "
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import { PlaceHolderImages } from "@/lib/placeholder-images"
 
 const newsItems = [
   {
@@ -37,6 +38,8 @@ const newsItems = [
 ]
 
 export default function Home() {
+  const bandungHero = PlaceHolderImages.find(img => img.id === "bandung-landmark")?.imageUrl || "https://picsum.photos/seed/bandung/1200/800";
+
   return (
     <PageWrapper>
       <div className="space-y-8 animate-in fade-in duration-500">
@@ -60,10 +63,11 @@ export default function Home() {
           <Card className="lg:col-span-2 overflow-hidden border-none shadow-lg group">
             <div className="relative h-64 md:h-96">
               <Image 
-                src="https://picsum.photos/seed/hero/1200/800" 
-                alt="Hero News" 
+                src={bandungHero} 
+                alt="Bandung Landmark" 
                 fill 
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
+                data-ai-hint="bandung city"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 p-6 md:p-8 space-y-3">
