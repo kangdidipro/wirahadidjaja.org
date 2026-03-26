@@ -46,7 +46,7 @@ export default function Home() {
             src="/banner_wirahadidjaja.jpg" 
             alt="Wirahadidjaja Hero Banner" 
             fill 
-            className="object-cover group-hover:scale-105 transition-transform duration-1000"
+            className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
             priority
           />
         </div>
@@ -131,7 +131,7 @@ export default function Home() {
         <section className="space-y-6">
           <div className="flex items-center justify-between">
             <h3 className="text-2xl font-headline font-bold flex items-center gap-2">
-              <Newspaper className="h-6 w-6 text-primary" />
+              < Newspaper className="h-6 w-6 text-primary" />
               Feed Berita Keluarga
             </h3>
             <Button variant="ghost" className="text-primary hover:text-primary/80 font-bold">Lihat Semua</Button>
