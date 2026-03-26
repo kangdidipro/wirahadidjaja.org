@@ -11,7 +11,7 @@ export function PageWrapper({ children }: { children: React.ReactNode }) {
     <SidebarProvider>
       <AppSidebar />
       <SidebarInset className="bg-background">
-        <header className="flex h-16 shrink-0 items-center justify-between gap-2 border-b px-6 sticky top-0 bg-background/80 backdrop-blur-md z-30">
+        <header className="flex h-20 shrink-0 items-center justify-between gap-2 border-b px-6 sticky top-0 bg-background/80 backdrop-blur-md z-30">
           <div className="flex items-center gap-4">
             <SidebarTrigger className="-ml-1" />
             <div className="flex flex-col">
