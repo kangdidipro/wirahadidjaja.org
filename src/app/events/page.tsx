@@ -17,16 +17,6 @@ const events = [
     attendees: 42
   },
   { 
-    id: 2, 
-    title: "Outbound & Camp Tahunan", 
-    date: "10-12 November 2024", 
-    time: "3 Hari 2 Malam",
-    location: "Cikole Lembang, Bandung", 
-    category: "Besar",
-    image: "https://picsum.photos/seed/ev2/600/400",
-    attendees: 125
-  },
-  { 
     id: 3, 
     title: "Workshop Digital Marketing", 
     date: "05 November 2024", 
