@@ -40,7 +40,7 @@ export default function Home() {
     <PageWrapper>
       <div className="space-y-10 animate-in fade-in duration-500">
         
-        {/* Main Hero Banner */}
+        {/* Main Hero Banner - Simplified without news/text content */}
         <div className="relative w-full h-[350px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl group border-4 border-white">
           <Image 
             src="/banner_wirahadidjaja.jpg" 
@@ -49,17 +49,6 @@ export default function Home() {
             className="object-cover group-hover:scale-105 transition-transform duration-1000"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 md:p-12">
-            <div className="max-w-4xl space-y-4">
-              <Badge className="bg-accent text-accent-foreground font-bold px-4 py-1 text-sm">PORTAL RESMI</Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-headline font-bold text-white leading-[1.1] tracking-tight">
-                Guyub Rukun Saklawase: Keluarga Besar Wirahadidjaja
-              </h1>
-              <p className="text-white/90 text-lg md:text-2xl hidden md:block font-medium max-w-3xl">
-                Menjalin silaturahmi antar generasi dan menjaga warisan luhur Aki Wirahadidjaja demi masa depan yang lebih gemilang.
-              </p>
-            </div>
-          </div>
         </div>
 
         {/* Section Title */}
