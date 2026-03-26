@@ -2,7 +2,7 @@
 
 import { SidebarProvider, SidebarInset, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "./app-sidebar"
-import { Bell, Search, User } from "lucide-react"
+import { Bell, User } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
@@ -14,31 +14,28 @@ export function PageWrapper({ children }: { children: React.ReactNode }) {
         <header className="flex h-16 shrink-0 items-center justify-between gap-2 border-b px-6 sticky top-0 bg-background/80 backdrop-blur-md z-30">
           <div className="flex items-center gap-4">
             <SidebarTrigger className="-ml-1" />
-            <div className="hidden md:flex relative w-64">
-              <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-              <input 
-                type="search" 
-                placeholder="Cari sesuatu..." 
-                className="w-full bg-muted/50 rounded-full py-1.5 pl-9 pr-4 text-sm outline-none focus:ring-1 focus:ring-primary transition-all"
-              />
+            <div className="flex flex-col">
+              <span className="font-headline font-bold text-primary tracking-tight leading-none">KB. Wirahadidjaja</span>
+              <span className="text-[10px] text-muted-foreground uppercase tracking-[0.2em] font-medium hidden sm:block">Komunitas Keluarga</span>
             </div>
           </div>
           
           <div className="flex items-center gap-6">
             {/* Sponsor Banner Logo */}
-            <div className="hidden sm:flex items-center gap-2 border-r pr-6 border-muted-foreground/20">
-              <span className="text-[9px] text-muted-foreground uppercase tracking-widest font-bold whitespace-nowrap">Supported by</span>
-              <Image 
-                src="/telkom.jpeg" 
-                alt="Telkom Logo" 
-                width={70} 
-                height={24} 
-                className="object-contain opacity-90"
-              />
+            <div className="flex items-center gap-3 border-r pr-6 border-muted-foreground/20">
+              <span className="text-[9px] text-muted-foreground uppercase tracking-widest font-bold whitespace-nowrap hidden md:block">Supported by</span>
+              <div className="relative h-8 w-20 flex items-center">
+                <Image 
+                  src="/telkom.jpeg" 
+                  alt="Telkom Logo" 
+                  fill
+                  className="object-contain opacity-90"
+                />
+              </div>
             </div>
 
             <div className="flex items-center gap-3">
-              <Button variant="ghost" size="icon" className="relative">
+              <Button variant="ghost" size="icon" className="relative hidden sm:flex">
                 <Bell className="h-5 w-5" />
                 <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-accent border-2 border-background"></span>
               </Button>
