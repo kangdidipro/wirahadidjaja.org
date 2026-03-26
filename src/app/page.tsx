@@ -10,9 +10,9 @@ const newsItems = [
   {
     id: 1,
     category: "HOT NEWS",
-    title: "Persiapan Reuni Akbar 2024",
+    title: "Persiapan Reuni Akbar 2026",
     excerpt: "Pertemuan keluarga besar dijadwalkan akan dilaksanakan pada bulan Desember mendatang di Bandung...",
-    date: "12 Okt 2024",
+    date: "12 Okt 2026",
     type: "hot",
     image: "https://picsum.photos/seed/n1/600/400"
   },
@@ -21,7 +21,7 @@ const newsItems = [
     category: "KEDUKAAN",
     title: "Berita Duka: Berpulangnya Bpk. H. Ahmad Wirahadidjaja",
     excerpt: "Telah berpulang ke Rahmatullah sesepuh keluarga kita, Bpk. H. Ahmad pada usia 82 tahun...",
-    date: "10 Okt 2024",
+    date: "10 Okt 2026",
     type: "death",
     image: "https://picsum.photos/seed/n2/600/400"
   },
@@ -30,7 +30,7 @@ const newsItems = [
     category: "PENGUMUMAN",
     title: "Pembaruan Sistem Kartu Wirahadidjaja",
     excerpt: "Semua anggota diharapkan untuk melakukan verifikasi data ulang melalui aplikasi untuk...",
-    date: "08 Okt 2024",
+    date: "08 Okt 2026",
     type: "info",
     image: "https://picsum.photos/seed/n3/600/400"
   }
@@ -69,7 +69,7 @@ export default function Home() {
               <div className="absolute bottom-0 left-0 p-6 md:p-8 space-y-3">
                 <Badge className="bg-accent text-accent-foreground font-bold">HOT NEWS</Badge>
                 <h2 className="text-2xl md:text-3xl font-headline font-bold text-white leading-tight">
-                  Musyawarah Besar Tahunan Keluarga Wirahadidjaja 2024: Membangun Sinergi Antar Generasi
+                  Musyawarah Besar Tahunan Keluarga Wirahadidjaja 2026: Membangun Sinergi Antar Generasi
                 </h2>
                 <p className="text-white/80 line-clamp-2 max-w-2xl">
                   Musyawarah ini bertujuan untuk mempererat silaturahmi sekaligus merancang program pemberdayaan ekonomi bagi anggota keluarga muda yang baru lulus kuliah.
@@ -93,7 +93,7 @@ export default function Home() {
               <CardContent className="space-y-4">
                 <div className="space-y-1">
                   <p className="font-semibold text-sm">Alm. Bpk. H. Ahmad Wirahadidjaja</p>
-                  <p className="text-xs text-muted-foreground">Wafat: 10 Oktober 2024 • Kediaman: Bandung</p>
+                  <p className="text-xs text-muted-foreground">Wafat: 10 Oktober 2026 • Kediaman: Bandung</p>
                 </div>
                 <Button variant="outline" size="sm" className="w-full text-xs">Ucapkan Belasungkawa</Button>
               </CardContent>
